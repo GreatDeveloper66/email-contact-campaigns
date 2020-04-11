@@ -75,7 +75,7 @@
           food: null,
           checked: []
         },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+        foods: [{ text: 'Select One', value: null }, 'FollowUp', 'secondfollowup', 'lastfollowup'],
         show: true
       }
     },
@@ -88,7 +88,7 @@
         evt.preventDefault()
         // Reset our form values
         this.form.email = ''
-        this.form.name = ''
+        this.form.name = '',
         this.form.title = ''
         this.form.company = ''
         this.form.food = null
