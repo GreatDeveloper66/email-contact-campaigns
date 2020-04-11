@@ -58,9 +58,9 @@
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ emailtemplate }}</pre>
-      <pre class="m-0">{{ followuptemplate }}</pre>
-      <pre class="m-0">{{ finaltemplate }}</pre>
+      <pre class="m-0" v-show="this.form.type === 'FollowUp'">{{ emailtemplate }}</pre>
+      <pre class="m-0" v-show="this.form.type === 'secondfollowup'">{{ followuptemplate }}</pre>
+      <pre class="m-0" v-show="this.form.type === 'lastfollowup'">{{ finaltemplate }}</pre>
     </b-card>
   </div>
 </template>
