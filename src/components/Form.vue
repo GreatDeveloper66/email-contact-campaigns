@@ -38,11 +38,11 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Food:" label-for="input-3">
+      <b-form-group id="input-group-5" label="Type:" label-for="input-5">
         <b-form-select
-          id="input-3"
-          v-model="form.food"
-          :options="foods"
+          id="input-5"
+          v-model="form.type"
+          :options="types"
           required
         ></b-form-select>
       </b-form-group>
@@ -72,10 +72,11 @@
           title: '',
           company: '',
           email: '',
-          food: null,
-          checked: []
+          type: null,
+          checked: [],
+          emailtemplate: ''
         },
-        foods: [{ text: 'Select One', value: null }, 'FollowUp', 'secondfollowup', 'lastfollowup'],
+        types: [{ text: 'Select One', value: null }, 'FollowUp', 'secondfollowup', 'lastfollowup'],
         show: true
       }
     },
@@ -91,7 +92,8 @@
         this.form.name = '',
         this.form.title = ''
         this.form.company = ''
-        this.form.food = null
+        this.form.type = null
+        this.form.emailtemplate = ''
         this.form.checked = []
         // Trick to reset/clear native browser form validation state
         this.show = false

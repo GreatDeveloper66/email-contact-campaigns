@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Header/>
-    <Form />
+    <b-container class="bv-example-row">
+    <b-row>
+      <b-col sm="6" offset="3"><Form /></b-col>
+    </b-row>
+  </b-container>
   </div>
 </template>
 
