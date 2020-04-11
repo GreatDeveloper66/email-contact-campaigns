@@ -58,8 +58,9 @@
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
       <pre class="m-0">{{ emailtemplate }}</pre>
+      <pre class="m-0">{{ followuptemplate }}</pre>
+      <pre class="m-0">{{ finaltemplate }}</pre>
     </b-card>
   </div>
 </template>
@@ -107,7 +108,7 @@
         Adam Shaffer
         `
         this.followuptemplate =
-        `Hi ______,
+        `Hi ${this.form.name},
 
         I am contacting you to follow up on my previous email. I am still
         interested in discovering more about your professional background and
@@ -120,7 +121,18 @@
         Best Regards,
         Adam Shaffer`
 
-        alert(JSON.stringify(this))
+        this.finaltemplate =
+        `Hi ${this.form.name},
+        I am following up on my previous email to see if you are still
+        interested connecting. I’d love to learn more about your career journey
+        and insights into the tech industry. I’m sure you’re busy so even 20
+        minutes would be appreciated. I am available to meet virtually 6:00 to
+        9:00 A.M CT and 12:00-1:00 PM CT on weekdays.
+
+        Thanks so much,
+        Adam Shaffer.`
+
+        // alert(JSON.stringify(this))
       },
       onReset(evt) {
         evt.preventDefault()
