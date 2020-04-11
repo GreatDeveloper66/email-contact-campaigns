@@ -59,6 +59,7 @@
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
+      <pre class="m-0">{{ emailtemplate }}</pre>
     </b-card>
   </div>
 </template>
@@ -73,9 +74,11 @@
           company: '',
           email: '',
           type: null,
-          checked: [],
-          emailtemplate: ''
+          checked: []
         },
+        emailtemplate: '',
+        followuptemplate: '',
+        finaltemplate: '',
         types: [{ text: 'Select One', value: null }, 'FollowUp', 'secondfollowup', 'lastfollowup'],
         show: true
       }
@@ -83,7 +86,41 @@
     methods: {
       onSubmit(evt) {
         evt.preventDefault()
-        alert(JSON.stringify(this.form))
+        this.emailtemplate =
+        `Hi ${this.form.name},I came across your profile on LinkedIn and
+        felt compelled to reach out to you. As someone with a desire to
+        work as a Software Engineer within the Tech industry, your background in
+        [] and the journey that led you to your current role at ${this.form.company}
+        as a ${this.form.title} is interesting to me. While this may be a bit forward,
+        I would love to virtually connect with you to gain some advice and hear your
+        story. I am sure you are quite busy, but even just 30 minutes of your time
+        will give me the opportunity to learn from someone with an impressive
+        background like your own.
+
+        I know with recent circumstances it will be best to meet over video chat
+        or via phone call. I am usually available to meet 6:00 to 9:00 A.M CT and
+        12:00-1:00 PM CT on weekdays. Please let me know if there is a timeframe
+        that works best for you. Thank you in advance and I’m looking forward to
+        hearing back from you!
+
+        Best Regards,
+        Adam Shaffer
+        `
+        this.followuptemplate =
+        `Hi ______,
+
+        I am contacting you to follow up on my previous email. I am still
+        interested in discovering more about your professional background and
+        your journey to becoming a ${this.form.title} at ${this.form.company}.
+        Any advice or insight from someone with your skills and experience would
+        be very helpful and greatly appreciated. If you are interested in
+        connecting I am available to meet virtually 6:00 to 9:00 A.M CT and
+        12:00-1:00 PM CT on weekdays.
+
+        Best Regards,
+        Adam Shaffer`
+
+        alert(JSON.stringify(this))
       },
       onReset(evt) {
         evt.preventDefault()
@@ -93,7 +130,9 @@
         this.form.title = ''
         this.form.company = ''
         this.form.type = null
-        this.form.emailtemplate = ''
+        this.emailtemplate = '',
+        this.followuptemplate = '',
+        this.finaltemplate = ''
         this.form.checked = []
         // Trick to reset/clear native browser form validation state
         this.show = false
