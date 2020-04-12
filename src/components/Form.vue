@@ -90,6 +90,8 @@
         emailtemplate: '',
         followuptemplate: '',
         finaltemplate: '',
+        firstsubject: 'Connecting Like Minds for a Virtual Chat',
+        followupsubject: 'Virtual Chat Follow-Up',
         types: [{ text: 'Select One', value: null }, 'FollowUp', 'secondfollowup', 'lastfollowup'],
         show: true
       }
@@ -119,7 +121,7 @@
         Best Regards,
         Adam Shaffer
 
-        <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
+        <a href='mailto:${this.form.email}?subject=${this.firstsubject}' target='_blank'>EMAIL</a>
         `
         this.followuptemplate =
         `
@@ -136,7 +138,7 @@
         Best Regards,
         Adam Shaffer
 
-        <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
+        <a href='mailto:${this.form.email}?subject=${this.followupsubject}' target='_blank'>EMAIL</a>
 
         `
 
@@ -145,7 +147,7 @@
         this.finaltemplate =
         `
         Hi ${this.form.name},
-        
+
         I am following up on my previous email to see if you are still
         interested connecting. I’d love to learn more about your career journey
         and insights into the tech industry. I’m sure you’re busy so even 20
@@ -155,7 +157,7 @@
         Thanks so much,
         Adam Shaffer.
 
-        <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
+        <a href='mailto:${this.form.email}?subject={followupsubject}' target='_blank'>EMAIL</a>
         `
       },
       onReset(evt) {
