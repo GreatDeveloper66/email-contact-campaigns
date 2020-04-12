@@ -20,25 +20,34 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Company:" label-for="input-3">
+      <b-form-group id="input-group-3" label="Recepient Industry:" label-for="input-3">
         <b-form-input
           id="input-3"
+          v-model="form.industry"
+          required
+          placeholder="Enter Industry"
+        ></b-form-input>
+      </b-form-group>
+
+      <b-form-group id="input-group-4" label="Company:" label-for="input-4">
+        <b-form-input
+          id="input-4"
           v-model="form.company"
           required
           placeholder="Enter Company"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-4" label="Email:" label-for="input-4">
+      <b-form-group id="input-group-5" label="Email:" label-for="input-5">
         <b-form-input
-          id="input-4"
+          id="input-5"
           v-model="form.email"
           required
           placeholder="Enter Email"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-5" label="Type:" label-for="input-5">
+      <b-form-group id="input-group-6" label="Type:" label-for="input-6">
         <b-form-select
           id="input-5"
           v-model="form.type"
@@ -72,6 +81,7 @@
         form: {
           name: '',
           title: '',
+          industry: '',
           company: '',
           email: '',
           type: null,
@@ -91,7 +101,7 @@
         `Hi ${this.form.name},I came across your profile on LinkedIn and
         felt compelled to reach out to you. As someone with a desire to
         work as a Software Engineer within the Tech industry, your background in
-        the tech industry and the journey that led you to your current role at
+        the ${this.form.industry} industry and the journey that led you to your current role at
         ${this.form.company} as a ${this.form.title} is interesting to me. While
         this may be a bit forward, I would love to virtually connect with you to
         gain some advice and hear your story. I am sure you are quite busy, but
