@@ -58,9 +58,9 @@
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0" v-show="this.form.type === 'FollowUp'">{{ emailtemplate }}</pre>
-      <pre class="m-0" v-show="this.form.type === 'secondfollowup'">{{ followuptemplate }}</pre>
-      <pre class="m-0" v-show="this.form.type === 'lastfollowup'">{{ finaltemplate }}</pre>
+      <pre class="m-0" v-show="this.form.type === 'FollowUp'" v-html="emailtemplate"></pre>
+      <pre class="m-0" v-show="this.form.type === 'secondfollowup'" v-html="followuptemplate"></pre>
+      <pre class="m-0" v-show="this.form.type === 'lastfollowup'" v-html="finaltemplate"></pre>
     </b-card>
   </div>
 </template>
@@ -91,12 +91,12 @@
         `Hi ${this.form.name},I came across your profile on LinkedIn and
         felt compelled to reach out to you. As someone with a desire to
         work as a Software Engineer within the Tech industry, your background in
-        [] and the journey that led you to your current role at ${this.form.company}
-        as a ${this.form.title} is interesting to me. While this may be a bit forward,
-        I would love to virtually connect with you to gain some advice and hear your
-        story. I am sure you are quite busy, but even just 30 minutes of your time
-        will give me the opportunity to learn from someone with an impressive
-        background like your own.
+        the tech industry and the journey that led you to your current role at
+        ${this.form.company} as a ${this.form.title} is interesting to me. While
+        this may be a bit forward, I would love to virtually connect with you to
+        gain some advice and hear your story. I am sure you are quite busy, but
+        even just 30 minutes of your time will give me the opportunity to learn
+        from someone with an impressive background like your own.
 
         I know with recent circumstances it will be best to meet over video chat
         or via phone call. I am usually available to meet 6:00 to 9:00 A.M CT and
@@ -106,6 +106,8 @@
 
         Best Regards,
         Adam Shaffer
+
+        <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
         `
         this.followuptemplate =
         `Hi ${this.form.name},
@@ -119,7 +121,13 @@
         12:00-1:00 PM CT on weekdays.
 
         Best Regards,
-        Adam Shaffer`
+        Adam Shaffer
+
+        <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
+
+        `
+
+
 
         this.finaltemplate =
         `Hi ${this.form.name},
@@ -130,7 +138,10 @@
         9:00 A.M CT and 12:00-1:00 PM CT on weekdays.
 
         Thanks so much,
-        Adam Shaffer.`
+        Adam Shaffer.
+
+        <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
+        `
 
         // alert(JSON.stringify(this))
       },
