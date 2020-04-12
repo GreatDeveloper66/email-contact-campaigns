@@ -87,6 +87,9 @@
           type: null,
           checked: []
         },
+        emailbody: '',
+        followupbody: '',
+        finalbody: '',
         emailtemplate: '',
         followuptemplate: '',
         finaltemplate: '',
@@ -99,7 +102,7 @@
     methods: {
       onSubmit(evt) {
         evt.preventDefault()
-        this.emailtemplate =
+        this.emailbody =
         `
         Hi ${this.form.name},I came across your profile on LinkedIn and
         felt compelled to reach out to you. As someone with a desire to
@@ -120,31 +123,14 @@
 
         Best Regards,
         Adam Shaffer
-
-        <a href='mailto:${this.form.email}?subject=${this.firstsubject}' target='_blank'>EMAIL</a>
         `
-        this.followuptemplate =
+        this.emailtemplate =
         `
-        Hi ${this.form.name},
+        ${this.emailbody}
 
-        I am contacting you to follow up on my previous email. I am still
-        interested in discovering more about your professional background and
-        your journey to becoming a ${this.form.title} at ${this.form.company}.
-        Any advice or insight from someone with your skills and experience would
-        be very helpful and greatly appreciated. If you are interested in
-        connecting I am available to meet virtually 6:00 to 9:00 A.M CT and
-        12:00-1:00 PM CT on weekdays.
-
-        Best Regards,
-        Adam Shaffer
-
-        <a href='mailto:${this.form.email}?subject=${this.followupsubject}' target='_blank'>EMAIL</a>
-
+        <a href='mailto:${this.form.email}?subject=${this.firstsubject}&body=${this.emailbody}' target='_blank'>EMAIL</a>
         `
-
-
-
-        this.finaltemplate =
+        this.followupbody =
         `
         Hi ${this.form.name},
 
@@ -157,7 +143,34 @@
         Thanks so much,
         Adam Shaffer.
 
-        <a href='mailto:${this.form.email}?subject={followupsubject}' target='_blank'>EMAIL</a>
+        `
+        this.followuptemplate =
+        `
+        ${this.followupbody}
+
+        <a href='mailto:${this.form.email}?subject=${this.followupsubject}&body=${this.followupbody}' target='_blank'>EMAIL</a>
+
+        `
+        this.finalbody =
+        `
+        Hi ${this.form.name},
+
+        I am following up on my previous email to see if your are still interested in
+        touching base. I am sure you are busy but I would greatly appreciate just
+        20 minutes of your time to learn more aobut your career journey and gain insights
+        from your experience. If you can make the time feel free to reach out.
+
+        Thanks so much,
+        Adam Shaffer.
+
+        `
+
+
+        this.finaltemplate =
+        `
+        ${this.followupbody}
+
+        <a href='mailto:${this.form.email}?subject={followupsubject}&body=${this.followupbody}' target='_blank'>EMAIL</a>
         `
       },
       onReset(evt) {
