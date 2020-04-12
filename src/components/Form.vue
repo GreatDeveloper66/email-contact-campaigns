@@ -134,9 +134,9 @@
         `
         Hi ${this.form.name},%0D%0A%0D%0A
 
-        I am following up on my previous email to see if you are still%0D%0A
-        interested in connecting. I’d love to learn more about your career journey%0D%0A
-        and insights into the tech industry. I’m sure you’re busy so even 20%0D%0A
+        I am following up on my previous email to see if you are interested%0D%0A
+        in connecting. I’d love to learn more about your career journey and%0D%0A
+        insights into the tech industry. I’m sure you’re busy so even 20%0D%0A
         minutes would be appreciated. I am available to meet virtually 6:00 to%0D%0A
         9:00 A.M CT and 12:00-1:00 PM CT on weekdays.%0D%0A%0D%0A
 
@@ -155,10 +155,10 @@
         `
         Hi ${this.form.name},%0D%0A%0D%0A
 
-        I am following up on my previous email to see if your are still interested in%0D%0A
+        I am following up on my previous email to see if your are interested in%0D%0A
         touching base. I am sure you are busy but I would greatly appreciate just%0D%0A
-        20 minutes of your time to learn more about your career journey and gain insights%0D%0A
-        from your experience. If you can make the time feel free to reach out.%0D%0A%0D%0A
+        20 minutes of your time to learn more about your career journey and gain %0D%0A
+        insights from your experience. If you can make the time feel free to reach out.%0D%0A%0D%0A
 
         Thanks so much,%0D%0A
         Adam Shaffer.
