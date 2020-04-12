@@ -170,7 +170,7 @@
         `
         ${this.followupbody}
 
-        <a href='mailto:${this.form.email}?subject={followupsubject}&body=${this.followupbody}' target='_blank'>EMAIL</a>
+        <a href='mailto:${this.form.email}?subject=${this.followupsubject}&body=${this.followupbody}' target='_blank'>EMAIL</a>
         `
       },
       onReset(evt) {
