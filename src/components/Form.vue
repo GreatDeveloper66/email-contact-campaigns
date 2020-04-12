@@ -104,24 +104,24 @@
         evt.preventDefault()
         this.emailbody =
         `
-        Hi ${this.form.name},I came across your profile on LinkedIn and
-        felt compelled to reach out to you. As someone with a desire to
-        work as a Software Engineer within the Tech industry, your background in
-        the ${this.form.industry} industry and the journey that led you to your
-        current role at ${this.form.company} as a ${this.form.title} is
-        interesting to me. While this may be a bit forward, I would love to
-        virtually connect with you to gain some advice and hear your story. I am
-        sure you are quite busy, but even just 30 minutes of your time will give
-        me the opportunity to learn from someone with an impressive background
-        like your own.
+        Hi ${this.form.name},%0D%0A%0D%0AI came across your profile on LinkedIn and%0D%0A
+        felt compelled to reach out to you. As someone with a desire to%0D%0A
+        work as a Software Engineer within the Tech industry, your background in%0D%0A
+        the ${this.form.industry} industry and the journey that led you to your%0D%0A
+        current role at ${this.form.company} as a ${this.form.title} is%0D%0A
+        interesting to me. %0D%0A%0D%0AWhile this may be a bit forward, I would love to%0D%0A
+        virtually connect with you to gain some advice and hear your story. I am%0D%0A
+        sure you are quite busy, but even just 30 minutes of your time will give%0D%0A
+        me the opportunity to learn from someone with an impressive background%0D%0A
+        like your own.%0D%0A%0D%0A
 
-        I know with recent circumstances it will be best to meet over video chat
-        or via phone call. I am usually available to meet 6:00 to 9:00 A.M CT and
-        12:00-1:00 PM CT on weekdays. Please let me know if there is a timeframe
-        that works best for you. Thank you in advance and I’m looking forward to
-        hearing back from you!
+        I know with recent circumstances it will be best to meet over video chat%0D%0A
+        or via phone call. I am usually available to meet 6:00 to 9:00 A.M CT and%0D%0A
+        12:00-1:00 PM CT on weekdays. Please let me know if there is a timeframe%0D%0A
+        that works best for you. Thank you in advance and I’m looking forward to%0D%0A
+        hearing back from you!%0D%0A%0D%0A
 
-        Best Regards,
+        Best Regards,%0D%0A
         Adam Shaffer
         `
         this.emailtemplate =
@@ -132,15 +132,15 @@
         `
         this.followupbody =
         `
-        Hi ${this.form.name},
+        Hi ${this.form.name},%0D%0A%0D%0A
 
-        I am following up on my previous email to see if you are still
-        interested connecting. I’d love to learn more about your career journey
-        and insights into the tech industry. I’m sure you’re busy so even 20
-        minutes would be appreciated. I am available to meet virtually 6:00 to
-        9:00 A.M CT and 12:00-1:00 PM CT on weekdays.
+        I am following up on my previous email to see if you are still%0D%0A
+        interested connecting. I’d love to learn more about your career journey%0D%0A
+        and insights into the tech industry. I’m sure you’re busy so even 20%0D%0A
+        minutes would be appreciated. I am available to meet virtually 6:00 to%0D%0A
+        9:00 A.M CT and 12:00-1:00 PM CT on weekdays.%0D%0A%0D%0A
 
-        Thanks so much,
+        Thanks so much,%0D%0A
         Adam Shaffer.
 
         `
@@ -153,14 +153,14 @@
         `
         this.finalbody =
         `
-        Hi ${this.form.name},
+        Hi ${this.form.name},%0D%0A%0D%0A
 
-        I am following up on my previous email to see if your are still interested in
-        touching base. I am sure you are busy but I would greatly appreciate just
-        20 minutes of your time to learn more aobut your career journey and gain insights
-        from your experience. If you can make the time feel free to reach out.
+        I am following up on my previous email to see if your are still interested in%0D%0A
+        touching base. I am sure you are busy but I would greatly appreciate just%0D%0A
+        20 minutes of your time to learn more aobut your career journey and gain insights%0D%0A
+        from your experience. If you can make the time feel free to reach out.%0D%0A%0D%0A
 
-        Thanks so much,
+        Thanks so much,%0D%0A
         Adam Shaffer.
 
         `
