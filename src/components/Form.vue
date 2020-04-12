@@ -66,7 +66,7 @@
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
+    <b-card class="mt-3 text-left" header="Email Body">
       <pre class="m-0" v-show="this.form.type === 'FollowUp'" v-html="emailtemplate"></pre>
       <pre class="m-0" v-show="this.form.type === 'secondfollowup'" v-html="followuptemplate"></pre>
       <pre class="m-0" v-show="this.form.type === 'lastfollowup'" v-html="finaltemplate"></pre>
@@ -98,15 +98,17 @@
       onSubmit(evt) {
         evt.preventDefault()
         this.emailtemplate =
-        `Hi ${this.form.name},I came across your profile on LinkedIn and
+        `
+        Hi ${this.form.name},I came across your profile on LinkedIn and
         felt compelled to reach out to you. As someone with a desire to
         work as a Software Engineer within the Tech industry, your background in
-        the ${this.form.industry} industry and the journey that led you to your current role at
-        ${this.form.company} as a ${this.form.title} is interesting to me. While
-        this may be a bit forward, I would love to virtually connect with you to
-        gain some advice and hear your story. I am sure you are quite busy, but
-        even just 30 minutes of your time will give me the opportunity to learn
-        from someone with an impressive background like your own.
+        the ${this.form.industry} industry and the journey that led you to your
+        current role at ${this.form.company} as a ${this.form.title} is
+        interesting to me. While this may be a bit forward, I would love to
+        virtually connect with you to gain some advice and hear your story. I am
+        sure you are quite busy, but even just 30 minutes of your time will give
+        me the opportunity to learn from someone with an impressive background
+        like your own.
 
         I know with recent circumstances it will be best to meet over video chat
         or via phone call. I am usually available to meet 6:00 to 9:00 A.M CT and
@@ -120,7 +122,8 @@
         <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
         `
         this.followuptemplate =
-        `Hi ${this.form.name},
+        `
+        Hi ${this.form.name},
 
         I am contacting you to follow up on my previous email. I am still
         interested in discovering more about your professional background and
@@ -140,7 +143,9 @@
 
 
         this.finaltemplate =
-        `Hi ${this.form.name},
+        `
+        Hi ${this.form.name},
+        
         I am following up on my previous email to see if you are still
         interested connecting. I’d love to learn more about your career journey
         and insights into the tech industry. I’m sure you’re busy so even 20
@@ -152,8 +157,6 @@
 
         <a href='mailto:${this.form.email}' target='_blank'>EMAIL</a>
         `
-
-        // alert(JSON.stringify(this))
       },
       onReset(evt) {
         evt.preventDefault()
