@@ -108,8 +108,8 @@
 
         I came across your profile on LinkedIn and felt compelled to reach out to%0D%0A
         you. As someone with a desire to work as a Software Engineer your background%0D%0A
-        in the ${this.form.industry} industry and the journey that led you to your%0D%0A
-        current role at ${this.form.company} as a ${this.form.title} is interesting to me.%0D%0A%0D%0A
+        in ${this.form.industry} and the journey that led you to your current role at%0D%0A
+        ${this.form.company} as a ${this.form.title} is fascinating to me.%0D%0A%0D%0A
         While this may be a bit forward, I would love to virtually connect with%0D%0A
         you to gain some insight and hear your story. I am sure you are quite busy,%0D%0A
         but even just 30 minutes of your time will give me the opportunity to learn%0D%0A
