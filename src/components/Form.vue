@@ -135,10 +135,10 @@
         Hi ${this.form.name},%0D%0A%0D%0A
 
         I am following up on my previous email to see if you are interested%0D%0A
-        in connecting. I’d love to learn more about your career journey and%0D%0A
-        insights into the tech industry. I’m sure you’re busy so even 20%0D%0A
-        minutes would be appreciated. I am available to meet virtually 6:00 to%0D%0A
-        9:00 A.M CT and 12:00-1:00 PM CT on weekdays.%0D%0A%0D%0A
+        in connecting. I’d love to learn more about your career journey to becoming%0D%0A
+        a ${this.form.title} and insights into ${this.form.industry}. I’m sure%0D%0A
+        you’re busy so even 20 minutes would be appreciated. I am available to meet%0D%0A
+        virtually 6:00 to 9:00 A.M CT and 12:00-1:00 PM CT on weekdays.%0D%0A%0D%0A
 
         Thanks so much,%0D%0A
         Adam Shaffer.
