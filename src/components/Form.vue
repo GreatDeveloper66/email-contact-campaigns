@@ -108,8 +108,8 @@
 
         I came across your profile on LinkedIn and felt compelled to reach out to%0D%0A
         you. As someone with a desire to work as a Software Engineer your background%0D%0A
-        in the ${this.form.industry} industry and the journey that led you to your%0D%0A
-        current role at ${this.form.company} as a ${this.form.title} is interesting to me.%0D%0A%0D%0A
+        in ${this.form.industry} and the journey that led you to your current role at%0D%0A
+        ${this.form.company} as a ${this.form.title} is fascinating to me.%0D%0A%0D%0A
         While this may be a bit forward, I would love to virtually connect with%0D%0A
         you to gain some insight and hear your story. I am sure you are quite busy,%0D%0A
         but even just 30 minutes of your time will give me the opportunity to learn%0D%0A
@@ -135,10 +135,10 @@
         Hi ${this.form.name},%0D%0A%0D%0A
 
         I am following up on my previous email to see if you are interested%0D%0A
-        in connecting. I’d love to learn more about your career journey and%0D%0A
-        insights into the tech industry. I’m sure you’re busy so even 20%0D%0A
-        minutes would be appreciated. I am available to meet virtually 6:00 to%0D%0A
-        9:00 A.M CT and 12:00-1:00 PM CT on weekdays.%0D%0A%0D%0A
+        in connecting. I’d love to learn more about your career journey to becoming%0D%0A
+        a ${this.form.title} and insights into ${this.form.industry}. I’m sure%0D%0A
+        you’re busy so even 20 minutes would be appreciated. I am available to meet%0D%0A
+        virtually 6:00 to 9:00 A.M CT and 12:00-1:00 PM CT on weekdays.%0D%0A%0D%0A
 
         Thanks so much,%0D%0A
         Adam Shaffer.
